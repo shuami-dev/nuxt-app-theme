@@ -1,0 +1,51 @@
+{
+  "name": "@shuami-dev/nuxt-app-theme",
+  "private": false,
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./style.css": "./dist/style.css"
+  },
+  "files": [
+    "dist",
+    "package.json",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsup index.ts --format esm,cjs --dts && node copyStyle.js && postcss dist/style.css -o dist/style.css",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "vue",
+    "nuxt",
+    "typescript",
+    "theme"
+  ],
+  "author": "Ahmad Shuami <shuami.dev@gmail.com>",
+  "license": "MIT",
+  "description": "Custom theme package for Nuxt 3 using Malaysia Government Design System (MYDS)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shuami-dev/nuxt-app-theme.git"
+  },
+  "type": "module",
+  "devDependencies": {
+    "@types/node": "^22.13.4",
+    "autoprefixer": "^10.4.20",
+    "cssnano": "^7.0.6",
+    "postcss": "^8.5.2",
+    "postcss-cli": "^11.0.0",
+    "tailwindcss": "^4.0.6",
+    "tsup": "^8.3.6",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "@govtechmy/myds-style": "^0.0.3"
+  }
+}

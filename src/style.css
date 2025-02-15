@@ -1,0 +1,30 @@
+@import "@govtechmy/myds-style/full.css";
+
+/* Override Tailwind's Default Font */
+:root {
+	--font-heading: "Poppins", ui-sans-serif, system-ui, sans-serif,
+		Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji !important;
+	--font-body: "Inter", ui-sans-serif, system-ui, sans-serif, Apple Color Emoji,
+		Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji !important;
+}
+
+html,
+body {
+	background-color: rgb(255, 255, 255);
+	font-family: var(--font-body) !important;
+}
+
+.heading {
+	font-family: var(--font-heading) !important;
+}
+
+/* Dark mode styles */
+html.dark body {
+	background-color: rgb(18, 18, 18);
+	color: rgb(255, 255, 255);
+}
+
+html.dark {
+	--color-background: #121212;
+	--color-text: rgb(255, 255, 255);
+}
