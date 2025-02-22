@@ -8,23 +8,24 @@
 		Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji !important;
 }
 
+html.dark {
+	--color-background: rgb(18, 18, 18) !important;
+	--color-text: rgb(255, 255, 255);
+}
+
 html,
 body {
 	background-color: rgb(255, 255, 255);
 	font-family: var(--font-body) !important;
 }
 
+/* Dark mode styles */
+html.dark, 
+html.dark body {
+    background-color: var(--color-background) !important;
+    color: var(--color-text);
+}
+
 .heading {
 	font-family: var(--font-heading) !important;
-}
-
-/* Dark mode styles */
-html.dark body {
-	background-color: rgb(18, 18, 18);
-	color: rgb(255, 255, 255);
-}
-
-html.dark {
-	--color-background: #121212;
-	--color-text: rgb(255, 255, 255);
 }
